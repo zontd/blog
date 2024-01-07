@@ -17,13 +17,13 @@
       <description>Table of content This theme supports displaying table of content (ToC) in blog posts.
 Parameters You can manage a ToC with two parameters:
 global toc parameter; post toc parameter. The post toc parameter has higher priority than the global toc parameter.
-Enable table of scontent on all posts To enable ToC on all posts (globally) set parameter toc to true in config.toml.
+Enable table of content on all posts To enable ToC on all posts (globally) set parameter toc to true in config.toml.
 [params] toc = true To disable ToC globally, simply ignore the toc parameter or set it to false.</description>
       
     </item>
     
     <item>
-      <title>tMath Typesetting - use Mathematical notation in blog posts</title>
+      <title>Math Typesetting - use Mathematical notation in blog posts</title>
       <link>https://hba.sid.one/posts/math-typesetting/</link>
       <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
       
@@ -85,7 +85,7 @@ Enable table of scontent on all posts To enable ToC on all posts (globally) set 
       
       <guid>https://hba.sid.one/pages/about/</guid>
       
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+      <description>Written in G0, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
 Hugo makes use of a variety of open source projects including:
 https://github.com/yuin/goldmark https://github.</description>
       
