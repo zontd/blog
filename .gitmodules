@@ -1,0 +1,3 @@
+[submodule "dzonta.com/themes/hugo-blog-awesome"]
+	path = dzonta.com/themes/hugo-blog-awesome
+	url = https://github.com/zontd/hugo-blog-awesome.git
