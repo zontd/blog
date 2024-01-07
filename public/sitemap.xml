@@ -2,40 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hba.sid.one/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/table-of-content/</loc>
-    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/math-typesetting/</loc>
-    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/markdown-syntax/</loc>
-    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/rich-content/</loc>
-    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/placeholder-text/</loc>
-    <lastmod>2023-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/tags/emoji/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/posts/emoji-support/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hba.sid.one/tags/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hba.sid.one/pages/about/</loc>
   </url><url>
     <loc>https://hba.sid.one/categories/</loc>
   </url><url>
+    <loc>https://hba.sid.one/</loc>
+  </url><url>
     <loc>https://hba.sid.one/pages/</loc>
+  </url><url>
+    <loc>https://hba.sid.one/posts/</loc>
+  </url><url>
+    <loc>https://hba.sid.one/tags/</loc>
   </url>
 </urlset>
