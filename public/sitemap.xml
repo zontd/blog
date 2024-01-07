@@ -2,15 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dzonta.com/</loc>
+    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dzonta.com/posts/crc/</loc>
+    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dzonta.com/posts/</loc>
+    <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dzonta.com/pages/about/</loc>
   </url><url>
     <loc>https://dzonta.com/categories/</loc>
   </url><url>
-    <loc>https://dzonta.com/</loc>
-  </url><url>
     <loc>https://dzonta.com/pages/</loc>
-  </url><url>
-    <loc>https://dzonta.com/posts/</loc>
   </url><url>
     <loc>https://dzonta.com/tags/</loc>
   </url>
