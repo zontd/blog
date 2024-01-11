@@ -2,6 +2,7 @@
 title: About
 description: 'About Me'
 author: Daniel Z
+toc: false
 ---
 
 # About 
