@@ -52,7 +52,7 @@
         },
         "datePublished": "2023-01-07",
         "description": "Setup table of content in Hugo blog awesome theme",
-        "wordCount":  133 ,
+        "wordCount":  1029 ,
         "mainEntityOfPage": "True",
         "dateModified": "2023-01-07",
         "image": {
@@ -177,31 +177,75 @@ stroke-linejoin="round" class="feather feather-home">
         <summary><b>Table of Contents</b></summary>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#this-a-h2-im-testing-out-more-of-the-features-of-this-site">This a H2, i&rsquo;m testing out more of the features of this site.</a>
-      <ul>
-        <li><a href="#this-is-now-a-h3">this is now a h3</a></li>
-      </ul>
-    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#starting-out">Starting out</a></li>
+    <li><a href="#certbot">Certbot</a></li>
+    <li><a href="#databases-and-functions">Databases and Functions</a></li>
+    <li><a href="#putting-it-together">Putting it together</a></li>
+    <li><a href="#cicd-pipeline">CI/CD Pipeline</a></li>
+    <li><a href="#learnings">Learnings</a></li>
+    <li><a href="#finishing-up">Finishing up</a></li>
   </ul>
 </nav>
     </details>
             <div class="page-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h2 id="introduction">Introduction</h2>
+<p>Hi there! I&rsquo;ve been working on the IT helpdesk for over a year now. To keep growing professionally, I&rsquo;ve decided to delve into learning about the different areas in IT. I’m currently working on a homelab but I needed a different project to sink my teeth into while I work on that. With so many fields to choose from I took a stab and chose cloud with the <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge</a>. For those not familiar, the aim of the cloud resume challenge is to build and deploy a static website using either Azure, AWS or Google Cloud service, I chose Azure.</p>
 <p><img src="1.png" alt="Landscape"></p>
-<h2 id="this-a-h2-im-testing-out-more-of-the-features-of-this-site">This a H2, i&rsquo;m testing out more of the features of this site.</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrapper list-page&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header-title center&#34;</span><span class="p">&gt;</span>Pages<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;page-content&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Content&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        
-</span></span></code></pre></div><h3 id="this-is-now-a-h3">this is now a h3</h3>
+<p>When I started looking into the challenge, I enjoyed the way the creator, Forrest Brazeal,  discussed it on a <a href="https://www.reddit.com/r/devops/comments/vyzvju/build_something_real_the_cloud_resume_challenge/?share_id=biS5M-wOGjdwmsRjkt4ZN&amp;utm_content=1&amp;utm_medium=ios_app&amp;utm_name=ioscss&amp;utm_source=share&amp;utm_term=1">reddit post</a>. According to them, the aim of the challenge was to “lay out a spec that would require people to open a bunch of search tabs, stay up late and go down rabbit holes”. As my intention was to mainly get a taste of the cloud, for the programming parts I followed Gwyneth’s (GPS) <a href="https://www.youtube.com/watch?v=ieYrBWmkfno">guide</a>. Following the guide didn’t spare me from the fate of having 50 tabs open at once though.</p>
+<h2 id="starting-out">Starting out</h2>
+<p>To start, Chat GPT and I didn’t have much of an issue creating a website with HTML and CSS, I fed it my resume, prompted it for a trendy resume website and proceeded to upload it into a blob container.</p>
+<p>Following that, I set up a DNS zone, switched my nameservers to Azure, and established a CDN for <a href="https://www.dansresume.cloud/">https://www.dansresume.cloud/</a>. This setup enabled me to secure the site with HTTPS.</p>
+<p><img src="associateendpoint.png" alt="endpoint"></p>
+<h2 id="certbot">Certbot</h2>
+<p>My initial challenge in troubleshooting came from an unexpected issue that really annoyed me. I discovered that Azure doesn&rsquo;t provide SSL certificates for Apex domains. This meant that my apex domain (domain without www.) dansresume.cloud, was accompanied with that unsightly &lsquo;insecure&rsquo; padlock icon, which drove me up the wall.</p>
+<p>To fix this, I used my Ubuntu server to generate my own SSL certificate following this <a href="https://www.xyb.name/2020/07/10/enable-https-and-root-domain-on-azure-cdn/">guide</a>. After generating the cert, Azure kept on spitting out an RSA error. After a bit of digging, a legend on the <a href="https://community.letsencrypt.org/t/getting-a-rsa-privkey-from-the-letsencrypt-generated-pem/188797/16">lets encrypt forum</a> suggested using “&ndash;key-type rsa” when generating my certificate which allowed the upload to work.</p>
+<p><img src="unsecured.png" alt="Unsecured"> <img src="sec.png" alt="sec"></p>
+<blockquote>
+<p>Note: The Lets Encrypt Cert only lasts 3 months so I have since taken the resume site off of Azure and parked it on Github pages as I don’t see myself re-veryfying it every 3 months. I’ll most likely add a visitor count to this blog instead.</p>
+</blockquote>
+<h2 id="databases-and-functions">Databases and Functions</h2>
+<p>Ok, now I can breathe, imagine having that annoying warning popup whenever someone would navigate to my root domain, the horror!</p>
+<p>With the site live and HTTPS working, it was time to explore the mythical backend of the cloud. My first step was setting up the CosmosDB database. This posed several challenges, as concepts like Row Key and Partition Key were new to me. Little did I realise, this was just the tip of the iceberg.</p>
+<p>After some researching I found I could then create the HTTP function through the VS code app, this was honestly awesome. I had originally set it up through the Azure interface but thought it’d be more fun to set it up there.</p>
+<p><img src="httptrigger.png" alt="httptrigger"></p>
+<h2 id="putting-it-together">Putting it together</h2>
+<p>With the function database and website created, It was time to connect them all. I started my research into bindings, triggers NoSQL, API’s and so fourth. It was at this moment I realised how in over my head I was.</p>
+<p><img src="https://media.giphy.com/media/ukGm72ZLZvYfS/giphy.gif" alt="blink182"></p>
+<p>After a couple of hours of research and asking chat gpt to explain concepts and snippets of code to me like a 5 year old, I decided it was time to call in the big guns. I booted up GPS&rsquo;s guide from here on out and followed it. The guide was relatively straightforward however given it being outdated by 2 years it still involved my own troubleshooting. For example, the commands used in the guide required additional installs. Whilst following, I enjoyed taking snippets of the code and understanding what meant what.</p>
+<p><img src="code.png" alt="code"></p>
+<p>I encountered a snag where the “ConnectionStringSetting” wasn’t being recognised. A bit of investigation revealed that the guide’s attributes were outdated. I needed to use the current ones, which I found in Microsoft’s documentation <a href="https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-output?pivots=programming-language-csharp&amp;tabs=python-v2%2Cin-process%2Cnodejs-v4%2Cfunctionsv2#attributes">here</a>. After the HTTP trigger was configured, I connected the javascript to my HTML and uploaded the new versions to Azure. It was working at last!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;js/modernizr.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;main.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Dan Zonta<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Visitor Count: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;visitCount&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;counter&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>        
+</span></span></code></pre></div><p><img src="4.png" alt="workingsite"></p>
+<h2 id="cicd-pipeline">CI/CD Pipeline</h2>
+<p>I could finally taste the end of this project,I was pretty happy to see my project working but wanted to build the CI/CD pipeline. This was crucial as it would enable me to update the webpage without having to directly edit within the storage account.</p>
+<p>There were a few things that went wrong whilst undertaking this stage. Even when following the guide on and off there was troubleshooting to be done such as looking into error codes and trying solutions out. After looking at documentation from various sources, adjusting for error codes such as trying the overwrite function was one of the solutions.</p>
+<p><img src="overwrite.png" alt="overwrite"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">        </span><span class="nt">inlineScript</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">            az storage blob upload-batch --account-name dansstorage123 --auth-mode key -d &#39;$web&#39; -s frontend --overwrite</span><span class="w">            
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Purge CDN endpoint</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">azure/CLI@v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">inlineScript</span><span class="p">:</span><span class="w"> </span><span class="l">|</span><span class="w">
+</span></span></span></code></pre></div><p>After some trial and error, the elation when I saw the CI/CD start running and tick everything off, It felt good not going to lie.</p>
+<p><img src="cicd.png" alt="cicd"></p>
+<h2 id="learnings">Learnings</h2>
 <ol>
-<li>First item</li>
-<li>Second item with some <code>code</code> in it</li>
-<li>Third item</li>
+<li>The Cloud is awesome and you can build some neat things on it</li>
+<li>Github makes development infinitely more efficient and streamlined</li>
+<li>API’s are a great tool for getting websites to talk to each other securely</li>
+<li>If you want your API to be secure, don’t leak your API key, which can overlooked as a beginner. I definetly didn&rsquo;t do that 👀</li>
+<li>Coding is a pivotal part of developing in the cloud.</li>
+<li>Fight and Win!</li>
 </ol>
+<h2 id="finishing-up">Finishing up</h2>
+<p>Lastly, I actually need a place to put this blog, I was thinking of Medium or Wordpress but because I’m in the mood to deploy things and I don’t want to pay for hosting, I&rsquo;m going to use a static site generator. You should fine a blog about that soon 🙂</p>
 
             </div>
         </article></main>
