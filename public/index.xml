@@ -6,7 +6,19 @@
     <description>Recent content in Home on Dan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://dzonta.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://dzonta.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Blog on a Static Site Generator</title>
+      <link>https://dzonta.com/posts/staticsitegenerators/</link>
+      <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dzonta.com/posts/staticsitegenerators/</guid>
+      
+      <description>Introduction Hello Hello! As I got to the end of writing my first post about the cloud resume challenge, I realised I had no idea where to put my blogs. I thought that I may as well blog about this process and It can double up as a guide for anyone else that would like to do it too.
+As I started thinking about where I wanted to post, I jotted down a criteria that i wanted it to have:</description>
+      
+    </item>
+    
     <item>
       <title>My Experience with the Cloud Resume Challenge</title>
       <link>https://dzonta.com/posts/cloudresumechallenge/</link>

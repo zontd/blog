@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Building a Blog on a Static Site Generator | Dan&#39;s blog</title>
+<meta property="og:title" content="Building a Blog on a Static Site Generator | Dan&#39;s blog" />
+<meta name="twitter:title" content="Building a Blog on a Static Site Generator | Dan&#39;s blog" />
+<meta itemprop="name" content="Building a Blog on a Static Site Generator | Dan&#39;s blog" />
+<meta name="application-name" content="Building a Blog on a Static Site Generator | Dan&#39;s blog" />
+<meta property="og:site_name" content="dzonta&#39;s blog" />
+
+<meta name="description" content="testing">
+<meta itemprop="description" content="testing" />
+<meta property="og:description" content="testing" />
+<meta name="twitter:description" content="testing" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+
+
+  <meta itemprop="image" content="https://dzonta.com/" />
+  <meta property="og:image" content="https://dzonta.com/" />
+  <meta name="twitter:image" content="https://dzonta.com/" />
+  <meta name="twitter:image:src" content="https://dzonta.com/" />
+
+
+
+
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-01-12T00:00:00Z />
+    <meta property="article:published_time" content=2024-01-12T00:00:00Z />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Building a Blog on a Static Site Generator",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-01-12",
+        "description": "testing",
+        "wordCount":  726 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-01-12",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Dan\u0027s blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.121.2">
+
+    
+
+    <link rel="canonical" href="https://dzonta.com/posts/staticsitegenerators/">
+    <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://dzonta.com/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    </head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://dzonta.com/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Building a Blog on a Static Site Generator</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-01-12T00:00:00&#43;00:00" itemprop="datePublished"> 12 Jan 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#welcome-to-hugo">Welcome to Hugo</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#end">End</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="introduction">Introduction</h2>
+<p>Hello Hello! As I got to the end of writing my first post about the cloud resume challenge, I realised I had no idea where to put my blogs. I thought that I may as well blog about this process and It can double up as a guide for anyone else that would like to do it too.</p>
+<p><img src="splash.jpg" alt="hero"></p>
+<p>As I started thinking about where I wanted to post, I jotted down a criteria that i wanted it to have:</p>
+<ol>
+<li>Super fast</li>
+<li>Not vulnerable</li>
+<li>Easy to update (CI/CD)</li>
+<li>Free</li>
+<li>Custom domains</li>
+</ol>
+<p>There were some restrictions for using the free tier blogs on medium and wordpress such as no custom domain so I was put off by those websites. I also wanted a blog that loaded super fast and would allow me to implement some CI/CD (continuous integration and continuous deployment) which I learned in the cloud project. Lastly i wanted some i didn’t have to constantly patch and fix up.</p>
+<p>You might suggest building your own website with HTML and CSS but ain’t nobody got time for that. After a little research I stumbled upon something that ticked all the boxes. The solution / unicorn I found was a static site generator. A SSG is a tool that generates a static html website off of the raw data you feed it. Once you know how to use it, it’s straightforward and fun.</p>
+<p>So if you’re interested in making your own blog, feel free to have a read. I&rsquo;ll go over the core concepts and my learnings plus it may give you the kick start to make your own blog too.</p>
+<h2 id="welcome-to-hugo">Welcome to Hugo</h2>
+<p>So which Static site generator did I choose? Hugo ofcourse! There actually wasn’t too much rhyme or reason, Hugo was just more accessible on Windows, has great themes and user base.</p>
+<blockquote>
+<p>Before getting underway, feel free to follow along, I’ll place the key points on what I did and link to documentation where need be.</p>
+</blockquote>
+<p><img src="hugo.png" alt="hugo"></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/">Code editor</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a></li>
+<li><a href="https://github.com/">A Github account</a></li>
+<li><a href="https://chocolatey.org/install">Chocolatey</a></li>
+</ul>
+<h2 id="steps">Steps</h2>
+<p>Here are the key steps that I took to get this up and running.</p>
+<ol>
+<li>Installed Hugo</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">choco</span> <span class="n">install</span> <span class="nb">hugo-extended</span>
+</span></span></code></pre></div><ol start="2">
+<li>Found a <a href="https://themes.gohugo.io/">Hugo theme</a> that I liked and forked its repository to my github.</li>
+</ol>
+<blockquote>
+<p>Forking creates a completely independent copy of the Git repository.</p>
+</blockquote>
+<p><img src="Fork.png" alt="Fork"></p>
+<ol start="3">
+<li>Created a second repository on my github account named “blog”, cloned that down to my device and generated a static site in that repository. I then cut the contents of the generated hugo site and placed them into the main blog folder.</li>
+</ol>
+<blockquote>
+<p>It needed to be done this way so that the Hugo files were in the main branch of the repository.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">cd </span><span class="n">documents</span><span class="p">/</span><span class="n">hugo</span><span class="p">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">Git</span> <span class="n">clone</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">zontd</span><span class="p">/</span><span class="n">blog</span><span class="p">.</span><span class="py">git</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd </span><span class="p">/</span><span class="n">blog</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hugo</span> <span class="n">new</span> <span class="n">site</span> <span class="n">blog</span>
+</span></span></code></pre></div><p><img src="mainbranch.png" alt="mainbranch"></p>
+<ol start="4">
+<li>Used <code>git submodule add</code> command in the themes directory of the newly generated hugo site.</li>
+</ol>
+<blockquote>
+<p>You can find a good guide on this <a href="https://www.andrewhoog.com/post/git-submodule-for-hugo-themes/">here</a>. It also does a good job explaining why the git submodule needed to be used instead of cloning directly.</p>
+</blockquote>
+<ol start="5">
+<li>I copied the contents of the example sites TOML file across to my newly generated TOML and edited the content to suit my site</li>
+</ol>
+<p><img src="toml.png" alt="toml"></p>
+<blockquote>
+<p>A TOML file is a simple way to store configuration data for programs, similar to other formats like JSON or YAML. It’s kind of similar to going into your INI files and editing them for skyrim and fallout. Try and find a theme that comes with a pre-configured TOML file so you can look at how they’ve set it up.</p>
+</blockquote>
+<ol start="6">
+<li>Created my first page using the hugo new content command e.g hugo new content posts/my-first-post.md</li>
+</ol>
+<blockquote>
+<p>This will create a folder and a markdown file for you. It will also generate the starter text for you. Hugo will separate your pages by the folders you generate. Therefore you need to keep your posts in one folder and about me in a separate one. It should look something like the below.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">content/about-us/index.md
+</span></span><span class="line"><span class="cl">content/contact-us/index.md
+</span></span><span class="line"><span class="cl">content/posts/post1.md
+</span></span><span class="line"><span class="cl">content/posts/post2.md
+</span></span></code></pre></div><blockquote>
+<p>You can read more on creating pages <a href="https://gohugo.io/getting-started/quick-start/">here</a></p>
+</blockquote>
+<ol start="7">
+<li>Generated my site using the Hugo command in the root directory of the site.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">cd </span><span class="n">hugo</span><span class="p">/</span><span class="n">blog</span><span class="p">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hugo</span>
+</span></span></code></pre></div><ol start="8">
+<li>Lastly, I created a workflow in github. I did this by following <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">this short guide</a></li>
+</ol>
+<h2 id="end">End</h2>
+<p>Thank you for having a read, feel free to reach out on Linkedin if you would like to chat or have any crituques, I&rsquo;m always open to optimising this for other learners.</p>
+<p><img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="thumbsup"></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/zontd" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/d-zonta/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Daniel Z.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://dzonta.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
