@@ -1,7 +1,7 @@
 ---
 title: Building a Blog with a Static Site Generator
 date: 2024-01-13
-description: Building a Blog with a Static Site Generator
+description: 
 ---
 
 ## Introduction
@@ -107,6 +107,3 @@ What I have now is a site which I can post quickly using Markdown and update usi
 Thank you for having a read, feel free to reach out on Linkedin if you would like to chat or have any crituques, I'm always open to optimising this for other learners.
 
 ![thumbsup](https://media.giphy.com/media/111ebonMs90YLu/giphy.gif)
-
-
-g
