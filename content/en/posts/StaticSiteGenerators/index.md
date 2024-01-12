@@ -26,11 +26,11 @@ So if you’re interested in making your own blog, feel free to have a read. I'l
 
 ## Welcome to Hugo
 
+![hugo](hugo.png)
+
 So which Static site generator did I choose? Hugo ofcourse! There actually wasn’t too much rhyme or reason, Hugo was just more accessible on Windows, has great themes and user base.
 
 > Before getting underway, feel free to follow along, I’ll place the key points on what I did and link to documentation where need be.
-
-![hugo](hugo.png)
 
 ## Requirements 
 
@@ -67,7 +67,7 @@ Hugo new site blog
 
 ![mainbranch](mainbranch.png)
 
-4. Used `git submodule add` command in the themes directory of the newly generated hugo site.
+4. Used `git submodule add` command to clone the site we forked earlier. This was done in the themes directory of the newly generated hugo site. 
 
 > You can find a good guide on this [here](https://www.andrewhoog.com/post/git-submodule-for-hugo-themes/). It also does a good job explaining why the git submodule needed to be used instead of cloning directly.
 
@@ -77,17 +77,17 @@ Hugo new site blog
 
 > A TOML file is a simple way to store configuration data for programs, similar to other formats like JSON or YAML. It’s kind of similar to going into your INI files and editing them for skyrim and fallout. Try and find a theme that comes with a pre-configured TOML file so you can look at how they’ve set it up.
 
-6. Created my first page using the hugo new content command e.g hugo new content posts/my-first-post.md
+6. Created my first page using the hugo new content command e.g `hugo new content posts/my-first-post.md`
 
 
 > This will create a folder and a markdown file for you. It will also generate the starter text for you. Hugo will separate your pages by the folders you generate. Therefore you need to keep your posts in one folder and about me in a separate one. It should look something like the below.
 
-```html
-content/about-us/index.md
-content/contact-us/index.md
-content/posts/post1.md
-content/posts/post2.md
-```
+
+- content/about-us/index.md
+- content/contact-us/index.md
+- content/posts/post1.md
+- content/posts/post2.md
+
 
 > You can read more on creating pages [here](https://gohugo.io/getting-started/quick-start/) 
 7. Generated my site using the Hugo command in the root directory of the site.
@@ -99,6 +99,8 @@ Hugo
 8. Lastly, I created a workflow in github. I did this by following [this short guide](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
 ## End
+
+What I have now is a site which I can post quickly using Markdown and update using `git push`. It's secure as it has no database, free thanks to github pages, fast thanks to it simply being HTML and CSS and lastly it's fun :)
 
 Thank you for having a read, feel free to reach out on Linkedin if you would like to chat or have any crituques, I'm always open to optimising this for other learners.
 

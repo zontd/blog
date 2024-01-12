@@ -52,7 +52,7 @@
         },
         "datePublished": "2024-01-12",
         "description": "testing",
-        "wordCount":  726 ,
+        "wordCount":  781 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-01-12",
         "image": {
@@ -201,11 +201,11 @@ stroke-linejoin="round" class="feather feather-home">
 <p>You might suggest building your own website with HTML and CSS but ain’t nobody got time for that. After a little research I stumbled upon something that ticked all the boxes. The solution / unicorn I found was a static site generator. A SSG is a tool that generates a static html website off of the raw data you feed it. Once you know how to use it, it’s straightforward and fun.</p>
 <p>So if you’re interested in making your own blog, feel free to have a read. I&rsquo;ll go over the core concepts and my learnings plus it may give you the kick start to make your own blog too.</p>
 <h2 id="welcome-to-hugo">Welcome to Hugo</h2>
+<p><img src="hugo.png" alt="hugo"></p>
 <p>So which Static site generator did I choose? Hugo ofcourse! There actually wasn’t too much rhyme or reason, Hugo was just more accessible on Windows, has great themes and user base.</p>
 <blockquote>
 <p>Before getting underway, feel free to follow along, I’ll place the key points on what I did and link to documentation where need be.</p>
 </blockquote>
-<p><img src="hugo.png" alt="hugo"></p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li><a href="https://code.visualstudio.com/">Code editor</a></li>
@@ -238,7 +238,7 @@ stroke-linejoin="round" class="feather feather-home">
 </span></span><span class="line"><span class="cl"><span class="n">Hugo</span> <span class="n">new</span> <span class="n">site</span> <span class="n">blog</span>
 </span></span></code></pre></div><p><img src="mainbranch.png" alt="mainbranch"></p>
 <ol start="4">
-<li>Used <code>git submodule add</code> command in the themes directory of the newly generated hugo site.</li>
+<li>Used <code>git submodule add</code> command to clone the site we forked earlier. This was done in the themes directory of the newly generated hugo site.</li>
 </ol>
 <blockquote>
 <p>You can find a good guide on this <a href="https://www.andrewhoog.com/post/git-submodule-for-hugo-themes/">here</a>. It also does a good job explaining why the git submodule needed to be used instead of cloning directly.</p>
@@ -251,16 +251,18 @@ stroke-linejoin="round" class="feather feather-home">
 <p>A TOML file is a simple way to store configuration data for programs, similar to other formats like JSON or YAML. It’s kind of similar to going into your INI files and editing them for skyrim and fallout. Try and find a theme that comes with a pre-configured TOML file so you can look at how they’ve set it up.</p>
 </blockquote>
 <ol start="6">
-<li>Created my first page using the hugo new content command e.g hugo new content posts/my-first-post.md</li>
+<li>Created my first page using the hugo new content command e.g <code>hugo new content posts/my-first-post.md</code></li>
 </ol>
 <blockquote>
 <p>This will create a folder and a markdown file for you. It will also generate the starter text for you. Hugo will separate your pages by the folders you generate. Therefore you need to keep your posts in one folder and about me in a separate one. It should look something like the below.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">content/about-us/index.md
-</span></span><span class="line"><span class="cl">content/contact-us/index.md
-</span></span><span class="line"><span class="cl">content/posts/post1.md
-</span></span><span class="line"><span class="cl">content/posts/post2.md
-</span></span></code></pre></div><blockquote>
+<ul>
+<li>content/about-us/index.md</li>
+<li>content/contact-us/index.md</li>
+<li>content/posts/post1.md</li>
+<li>content/posts/post2.md</li>
+</ul>
+<blockquote>
 <p>You can read more on creating pages <a href="https://gohugo.io/getting-started/quick-start/">here</a></p>
 </blockquote>
 <ol start="7">
@@ -272,6 +274,7 @@ stroke-linejoin="round" class="feather feather-home">
 <li>Lastly, I created a workflow in github. I did this by following <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">this short guide</a></li>
 </ol>
 <h2 id="end">End</h2>
+<p>What I have now is a site which I can post quickly using Markdown and update using <code>git push</code>. It&rsquo;s secure as it has no database, free thanks to github pages, fast thanks to it simply being HTML and CSS and lastly it&rsquo;s fun :)</p>
 <p>Thank you for having a read, feel free to reach out on Linkedin if you would like to chat or have any crituques, I&rsquo;m always open to optimising this for other learners.</p>
 <p><img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="thumbsup"></p>
 
