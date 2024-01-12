@@ -1,7 +1,7 @@
 ---
 title: Building a Blog with a Static Site Generator
-date: 2024-01-13
-description: 
+date: 2024-01-12
+description: Have a read
 ---
 
 ## Introduction
