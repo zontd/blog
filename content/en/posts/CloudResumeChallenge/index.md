@@ -1,6 +1,6 @@
 ---
 title: My Experience with the Cloud Resume Challenge
-date: 2023-12-29
+date: 2023-12-01
 description: Setup table of content in Hugo blog awesome theme
 ---
 
@@ -69,7 +69,7 @@ I encountered a snag where the “ConnectionStringSetting” wasn’t being reco
 
 ## CI/CD Pipeline
 
-I could finally taste the end of this project,I was pretty happy to see my project working but wanted to build the CI/CD pipeline. This was crucial as it would enable me to update the webpage without having to directly edit within the storage account.
+I could finally taste the end of this project, I was pretty happy to see my project working but wanted to build the CI/CD pipeline. This was crucial as it would enable me to update the webpage without having to directly edit within the storage account.
 
 There were a few things that went wrong whilst undertaking this stage. Even when following the guide on and off there was troubleshooting to be done such as looking into error codes and trying solutions out. After looking at documentation from various sources, adjusting for error codes such as trying the overwrite function was one of the solutions.
 
