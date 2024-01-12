@@ -1,6 +1,6 @@
 ---
 title: My Experience with the Cloud Resume Challenge
-date: 2023-01-07
+date: 2023-12-29
 description: Setup table of content in Hugo blog awesome theme
 ---
 
@@ -24,7 +24,7 @@ Following that, I set up a DNS zone, switched my nameservers to Azure, and estab
 
 ## Certbot
 
-My initial challenge in troubleshooting came from an unexpected issue that really annoyed me. I discovered that Azure doesn't provide SSL certificates for Apex domains. This meant that my apex domain (domain without www.) dansresume.cloud, was accompanied with that unsightly 'insecure' padlock icon, which drove me up the wall.
+My initial challenge in troubleshooting came from an unexpected issue that really annoyed me. I discovered that Azure doesn't provide SSL certificates for Apex domains. This meant that my apex domain (domain without www.) [dansresume.cloud](https://dansresume.cloud/), was accompanied with that unsightly 'insecure' padlock icon, which drove me up the wall.
 
 To fix this, I used my Ubuntu server to generate my own SSL certificate following this [guide](https://www.xyb.name/2020/07/10/enable-https-and-root-domain-on-azure-cdn/). After generating the cert, Azure kept on spitting out an RSA error. After a bit of digging, a legend on the [lets encrypt forum](https://community.letsencrypt.org/t/getting-a-rsa-privkey-from-the-letsencrypt-generated-pem/188797/16) suggested using “--key-type rsa” when generating my certificate which allowed the upload to work.
 
