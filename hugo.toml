@@ -86,7 +86,7 @@ disqusShortname = ''
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Daniel Z"
   name = "Daniel Z"
-  description = "Welcome to my blog, where I talk about how I learn from my numbskull mistakes."
+  description = "Welcome to my blog, I explore different technologies, accidently break things and learn how to fix said things :)"
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
